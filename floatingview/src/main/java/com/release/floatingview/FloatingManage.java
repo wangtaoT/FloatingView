@@ -35,7 +35,10 @@ public class FloatingManage implements IFloatingView, FloatMoveListener {
 
     private View viewToast;
     private boolean isToastShow = false;
+
     private String toastStr;
+    private int resId;
+
     //主体大小
     private float contentHeight;
     //toast大小
@@ -79,6 +82,9 @@ public class FloatingManage implements IFloatingView, FloatMoveListener {
     @Override
     public FloatingManage add() {
         showFloat(mContext);
+        if (mEnFloatingView != null) {
+            mEnFloatingView.setIconImage(resId);
+        }
         if (!TextUtils.isEmpty(toastStr)) {
             initToastView();
         }
@@ -104,9 +110,7 @@ public class FloatingManage implements IFloatingView, FloatMoveListener {
 
     @Override
     public FloatingManage icon(@DrawableRes int resId) {
-        if (mEnFloatingView != null) {
-            mEnFloatingView.setIconImage(resId);
-        }
+        this.resId = resId;
         return this;
     }
 
