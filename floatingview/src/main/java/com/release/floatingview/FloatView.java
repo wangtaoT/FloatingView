@@ -1,8 +1,8 @@
 package com.release.floatingview;
 
 import android.content.Context;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
 import android.view.MotionEvent;
 
 import com.makeramen.roundedimageview.RoundedImageView;

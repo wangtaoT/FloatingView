@@ -1,6 +1,6 @@
 package com.release.floatingview.listener;
 
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 
 import com.release.floatingview.FloatView;
 import com.release.floatingview.FloatingManage;
